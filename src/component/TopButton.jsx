@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TopButton() {
+function TopButton({setCity}) {
 const cities=[{
     id:1,
     title:'London '
@@ -26,7 +26,9 @@ return (
     <div className="flex item-center justify-around my-6">
 
         {cities.map((city)=>(
-           <button key={city.id} className="text-white text-lg font-medium ">{city.title}</button> 
+            <button key={city.id} className="text-white text-lg font-medium "
+                onClick={() => setCity({ q: city.title })}
+            >{city.title}</button> 
         ))}
 
     </div>

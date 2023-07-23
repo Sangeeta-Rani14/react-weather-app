@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { 
     UilTemperature,
@@ -6,10 +6,11 @@ import {
     UilSunset,
     UilTear,
     UilWind
- } from '@iconscout/react-unicons'
+}
+    from '@iconscout/react-unicons'
 
- import { makeIconURL,formatToLocalTime } from '../service/weatherservice'
- 
+import { makeIconURL,formatToLocalTime } from '../service/weatherservice'
+
 
 function TempDetail({
     weather: {
@@ -24,8 +25,11 @@ function TempDetail({
         humidity,
         feels_like,
         timezone,
-    },
-}) {
+    },units
+},)
+
+{
+
   return (
     <div>
         <div className='flex items-center justify-center py-6 text-xl text-cyan-200'>

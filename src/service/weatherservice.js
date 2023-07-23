@@ -13,7 +13,7 @@ const getFormattedWeatherData = async (city, units = "metric") => {
     .then((res) => res.json())
     .then((data) => data);
 
-    // console.log(data);
+    console.log(data);
 
   const {
     weather,
@@ -49,8 +49,11 @@ const formatToLocalTime = (
   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
 ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
-export { getFormattedWeatherData };
-export{formatToLocalTime,makeIconURL};
+const temp = (temp)=>{
+  var a=temp
+}
+export { getFormattedWeatherData};
+export{formatToLocalTime,makeIconURL,temp};
 
 
 
